@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: contents;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+
+.search-item {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.search-button {
+    padding: 5px 15px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.5s ease;
+}
+
+.search-button:hover {
+    background-color: #007a8c;
+}
+
+/* for hero section */
+.hero {
+    height: 90vh;
+    background: url('../images/nature.jpg.jpg') center/cover no-repeat;
+    color: rgb(49, 24, 24);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #a74e13;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background-color: #d3771f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .search-item {
+        flex-direction: column;
+    }
+
+    .search-input {
+        margin: 5px;
+    }
+    .hero{
+        padding: 10px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        /* Reduce heading size */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+}
+@media (max-width:480px) {
+    .hero {
+        padding: 15px;
+        height: auto; /* Allow content to dictate height */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+    
